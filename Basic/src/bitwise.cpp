@@ -33,18 +33,32 @@ int main(){
   int ans = 0;
 
 
-  int i=0;
+int i = 0;
+while(num!=0){
+  int digit = num %10;
+  if(digit==1){
+    ans = ans+pow(2,i);
+  }
+   num = num /10;
+   i++;
+
+}
+
+cout<<"decimal to binary of "<< originalNum <<" is "<<ans;
+
+
+  // int i=0;
 
   //First approach
 
-  while(num!=0){
-     rem = num % 2;
+  // while(num!=0){
+  //    rem = num % 2;
 
-     num = num /2;
+  //    num = num /2;
 
-     ans = (rem*pow(10,i))+ans;
-     i++;
-  }
+  //    ans = (rem*pow(10,i))+ans;
+  //    i++;
+  // }
 
   //2nd approach
 
@@ -59,7 +73,7 @@ int main(){
 
   // }
 
-  cout<<"binary of "<<originalNum<<" is "<<ans;
+  // cout<<"binary of "<<originalNum<<" is "<<ans;
 
 
 
