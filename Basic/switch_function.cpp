@@ -69,14 +69,58 @@ using namespace std;
 
 // Print fibonacci number btween 1 to n;
 
+// void printFibonacci(int n)
+// {
+//   int first = 1;
+//   int second = 1;
+//   cout << first << " " << second << " ";
+//   for (int i = 1; i <= n - 2; i++)
+//   {
+//     int next = first + second;
+//     cout << next << " ";
+//     first = second;
+//     second = next;
+//   }
+// }
+
+// count setBits
+
+int setBits(int n)
+{
+  int count = 0;
+  while (n > 0)
+  {
+    count = count + (n & 1);
+    // right shift n
+    n = n >> 1;
+  }
+  return count;
+}
+
 int main()
 {
+
+  int a, b;
+  cin >> a >> b;
+
+  int ans = setBits(a) + setBits(b);
+  cout << ans;
 
   // int num, r;
   // cin >> num >> r;
 
-  int n;
-  cin >> n;
+  // int n;
+  // cin >> n;
+
+  // if (n >= 1)
+  // {
+  //   printFibonacci(n);
+  // }
+
+  // else
+  // {
+  //   cout << "please enter value greater than 1";
+  // }
 
   // int result = getAp(n);
   // cout << "Ap of " << n << "th term is " << result;
