@@ -27,7 +27,11 @@ using namespace std;
 void vectorDemo()
 {
   // dynamic array change length based on elements
+  // when we push_back something in vector then it creates new array of double the size of present element
   vector<int> v = {1, 9, 2, 3, 5, 7};
+
+  cout << "Front " << v.front() << endl;
+  cout << "Back " << v.back() << endl;
 
   // to insert element at back of the container
   // sort(v.begin(), v.end());
@@ -39,7 +43,7 @@ void vectorDemo()
 
   v.push_back(10);
   v.emplace_back(11);
-  v.pop_back();
+  v.pop_back(); // remove element from back;
 
   // sort in descending order
   sort(v.rbegin(), v.rend());
@@ -50,13 +54,22 @@ void vectorDemo()
   // }
 
   // we can do this using iterator also
-  for (int x : v)
-  {
-    cout << x << " ";
-  }
-  cout << endl;
+  // for (int x : v)
+  // {
+  //   cout << x << " ";
+  // }
 
-  cout << v.capacity() << " ";
+  // 2nd method also used here
+
+  for (auto it = v.begin(); it != v.end(); it++)
+  {
+    cout << *it << " ";
+  }
+
+  cout << endl;
+  cout << v.size() << endl; // return size of element present in vector
+
+  cout << v.capacity() << " "; // size of vector
 
   // cout << v[0] << " " << v[1];
 }
