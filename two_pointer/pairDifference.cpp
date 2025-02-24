@@ -55,7 +55,6 @@ int pairDiff(vector<int> &nums, int target)
   {
     if (nums[end] - nums[start] == target)
     {
-      // return {end, start};
       return 1;
     }
     else if (nums[end] - nums[start] < target)
