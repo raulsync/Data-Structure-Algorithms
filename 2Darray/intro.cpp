@@ -10,6 +10,16 @@ int main()
 
   int arr[3][4] = {{1, 11, 111, 1111}, {2, 22, 222, 2222}, {3, 33, 333, 3333}};
 
+  // 2d vector
+  //  vector<vector<int>> matrix(row,vector<int>(col,elements))
+
+  // vector<vector<int>> matrix;
+
+  // row size
+  // matrix.size();
+  // column size
+  //  matrix[0].size()
+
   // taking input
 
   // for (int row = 0; row < 3; row++)
